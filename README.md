@@ -1,4 +1,13 @@
 #Colin's dotfiles
 ###2015.03.06
-####todo
-* add install instructions
+## install
+
+Run this:
+
+```
+git clone https://github.com/colinmahoney/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+sh makesymlinks.sh
+```
+
+## thanks

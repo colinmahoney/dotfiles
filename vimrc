@@ -18,8 +18,6 @@ set bs=2     " make backspace behave like normal again
 " Rebind <Leader> key
 let mapleader = ","
 
-
-" Bind nohl
 " Removes highlight of your last search
 " ``<C>`` stands for ``CTRL`` and therefore ``<C-n>`` stands for ``CTRL+n``
 noremap <C-n> :nohl<CR>
@@ -28,14 +26,13 @@ inoremap <C-n> :nohl<CR>
 
 
 " Quicksave command
-"" noremap <C-Z> :update<CR>
-"" vnoremap <C-Z> <C-C>:update<CR>
-"" inoremap <C-Z> <C-O>:update<CR>
-
-
+noremap <Leader>w :update<CR>
+vnoremap <Leader>w <C-C>:update<CR>
+inoremap <Leader>w <C-O>:update<CR>
+"
 " Quick quit command
-"" noremap <Leader>e :quit<CR>  " Quit current window
-"" noremap <Leader>E :qa!<CR>   " Quit all windows
+noremap <Leader>e :quit<CR>  " Quit current window
+noremap <Leader>E :qa!<CR>   " Quit all windows
 
 
 " bind Ctrl+<movement> keys to move around the windows, instead of using Ctrl+w + <movement>

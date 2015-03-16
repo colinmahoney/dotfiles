@@ -7,7 +7,7 @@ autocmd! bufwritepost .vimrc source %
 " paste. At the bottom you should see ``-- INSERT (paste) --``.
 
 set pastetoggle=<F2>
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 
 " Mouse and backspace
@@ -24,12 +24,14 @@ noremap <C-n> :nohl<CR>
 vnoremap <C-n> :nohl<CR>
 inoremap <C-n> :nohl<CR>
 
+" Avoid the <ESC> key
+inoremap jj <ESC>
 
-" Quicksave command
+" Quicksave command - edited to always enter 'normal' mode
 noremap <Leader>w :update<CR>
-vnoremap <Leader>w <C-C>:update<CR>
-inoremap <Leader>w <C-O>:update<CR>
-"
+vnoremap <Leader>w <C-c>:update<CR><ESC>`^
+inoremap <Leader>w <C-o>:update<CR><ESC>`^
+
 " Quick quit command
 noremap <Leader>e :quit<CR>  " Quit current window
 noremap <Leader>E :qa!<CR>   " Quit all windows

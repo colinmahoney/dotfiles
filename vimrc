@@ -135,8 +135,7 @@ call pathogen#infect()
 
 
 " Settings for vim-powerline
-" cd ~/.vim/bundle
-" git clone git://github.com/Lokaltog/vim-powerline.git
+" sudo dnf install vim-plugin-powerline
 python from powerline.vim import setup as powerline_setup
 python powerline_setup()
 python del powerline_setup
